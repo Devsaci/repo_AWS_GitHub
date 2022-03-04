@@ -1,51 +1,78 @@
-What’s an Auto Scaling Group?
-Auto Scaling Group in AWS with Load Balancer
+what’s an auto scaling group?
+auto scaling group in aws with load balancer
 
-Test1  Question 12: 
-Which of the following AWS services should be used to automatically distribute incoming traffic across multiple targets?
-•	 
-AWS Elastic Load Balancing
-•	 
-AWS Elastic Beanstalk
-•	 
-AWS Auto Scaling
-•	 
-Amazon Elasticsearch
+test1  question 12: 
+which of the following aws services should be used to automatically distribute incoming traffic across multiple targets?
+•  
+aws elastic load balancing
+•  
+aws elastic beanstalk
+•  
+aws auto scaling
+•  
+amazon elasticsearch
 
-Explanation
-Correct option:
-AWS Elastic Load Balancing
-Elastic Load Balancing is used to automatically distribute your incoming application traffic across all the EC2 instances that you are running. You can use Elastic Load Balancing to manage incoming requests by optimally routing traffic so that no one instance is overwhelmed. Your load balancer acts as a single point of contact for all incoming web traffic to your application. When an instance is added, it needs to register with the load balancer or no traffic is routed to it. When an instance is removed, it must deregister from the load balancer or traffic continues to be routed to it.
-Incorrect options:
-AWS Elastic Beanstalk - AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed in a variety of programming languages. You can simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring. You cannot use Beanstalk to distribute incoming traffic across multiple targets.
-Amazon Elasticsearch - The term "Elasticsearch" is used to define a distributed, open source search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured. Amazon Elasticsearch Service is a fully managed service that makes it easy to deploy, secure, and run Elasticsearch cost effectively at scale. It is a search and analytics service from Amazon.
-AWS Auto Scaling - AWS Auto Scaling monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. Using AWS Auto Scaling, it’s easy to setup application scaling for multiple resources across multiple services in minutes. This is a scaling service that helps you spin up resources as and when you need them and scale down when the high demand reduces. Auto Scaling can be used with Elastic Load Balacing to build high performance applications.
-Reference:
+explanation
+correct option:
+aws elastic load balancing
+elastic load balancing is used to automatically distribute your incoming application traffic across all the ec2 instances that you are running. you can use elastic load balancing to manage incoming requests by optimally routing traffic so that no one instance is overwhelmed. your load balancer acts as a single point of contact for all incoming web traffic to your application. when an instance is added, it needs to register with the load balancer or no traffic is routed to it. when an instance is removed, it must deregister from the load balancer or traffic continues to be routed to it.
+incorrect options:
+aws elastic beanstalk - aws elastic beanstalk is an easy-to-use service for deploying and scaling web applications and services developed in a variety of programming languages. you can simply upload your code and elastic beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring. you cannot use beanstalk to distribute incoming traffic across multiple targets.
+amazon elasticsearch - the term "elasticsearch" is used to define a distributed, open source search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured. amazon elasticsearch service is a fully managed service that makes it easy to deploy, secure, and run elasticsearch cost effectively at scale. it is a search and analytics service from amazon.
+aws auto scaling - aws auto scaling monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. using aws auto scaling, it’s easy to setup application scaling for multiple resources across multiple services in minutes. this is a scaling service that helps you spin up resources as and when you need them and scale down when the high demand reduces. auto scaling can be used with elastic load balacing to build high performance applications.
+reference:
 https://aws.amazon.com/elasticloadbalancing/
 
-Question 9: 
-A data analytics company is running a proprietary batch analytics application on AWS and wants to use a storage service which would be accessed by hundreds of EC2 instances simultaneously to append data to existing files. As a Cloud Practitioner, which AWS service would you suggest for this use-case?
-•	 
-EBS
-•	 
-EFS
-(Correct)
-•	 
-Instance Store
-•	 
-S3
+question 9: 
+a data analytics company is running a proprietary batch analytics application on aws and wants to use a storage service which would be accessed by hundreds of ec2 instances simultaneously to append data to existing files. as a cloud practitioner, which aws service would you suggest for this use-case?
+•  
+ebs
+•  
+efs
+(correct)
+•  
+instance store
+•  
+s3
 
+
+
+explanation
+correct option:
+"efs" - amazon efs is a file storage service for use with amazon ec2. amazon efs provides a file system interface, file system access semantics, and concurrently-accessible storage for up to thousands of amazon ec2 instances. amazon efs uses the network file system protocol.
+how efs works: 
+  via - https://aws.amazon.com/efs/
+incorrect options:
+ebs - amazon elastic block store (ebs) is an easy to use, high-performance block storage service designed for use with amazon elastic compute cloud (ec2) for both throughput and transaction-intensive workloads at any scale. ebs volumes cannot be accessed simultaneously by multiple ec2 instances, so this option is incorrect.
+instance store - an instance store provides temporary block-level storage for your instance. this storage is located on disks that are physically attached to the host computer. instance store volumes cannot be accessed simultaneously by multiple ec2 instances, so this option is incorrect.
+s3 - amazon simple storage service (amazon s3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. s3 is object storage and it does not support file append operations, so this option is incorrect.
+reference:   https://aws.amazon.com/efs/   
+
+
+
+
+Test 1 Question 5: 
+A big data analytics company is moving its IT infrastructure from an on-premises data center to AWS Cloud. The company has some server-bound software licenses that it wants to use on AWS. As a Cloud Practitioner, which of the following EC2 instance types would you recommend to the company?
+
+•  
+On-Demand Instance
+•  
+Reserved Instance
+•  
+Dedicated Instance
+•  
+Dedicated Host
+(Correct)
 
 
 Explanation
-Correct option:
-"EFS" - Amazon EFS is a file storage service for use with Amazon EC2. Amazon EFS provides a file system interface, file system access semantics, and concurrently-accessible storage for up to thousands of Amazon EC2 instances. Amazon EFS uses the Network File System protocol.
-How EFS works: 
-  via - https://aws.amazon.com/efs/
+
+Dedicated host
+Amazon EC2 Dedicated Hosts allow you to use your eligible software licenses from vendors such as Microsoft and Oracle on Amazon EC2. An Amazon EC2 Dedicated Host is a physical server fully dedicated for your use, so you can help address corporate compliance requirements.
+Exam Alert:
+Please review the differences between Dedicated hosts and Dedicated instances: via - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html
 Incorrect options:
-EBS - Amazon Elastic Block Store (EBS) is an easy to use, high-performance block storage service designed for use with Amazon Elastic Compute Cloud (EC2) for both throughput and transaction-intensive workloads at any scale. EBS volumes cannot be accessed simultaneously by multiple EC2 instances, so this option is incorrect.
-Instance Store - An instance store provides temporary block-level storage for your instance. This storage is located on disks that are physically attached to the host computer. Instance Store volumes cannot be accessed simultaneously by multiple EC2 instances, so this option is incorrect.
-S3 - Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. S3 is object storage and it does not support file append operations, so this option is incorrect.
-Reference:   https://aws.amazon.com/efs/   
+
+
 
 
